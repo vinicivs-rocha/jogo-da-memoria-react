@@ -1,0 +1,66 @@
+body>p:nth-child(4) {
+    color: rgb(0, 0, 255);
+}
+
+body>p:nth-child(5) {
+    color: rgba(0, 0, 255, 0.752);
+}
+
+body>p:nth-child(6) {
+    color: #ff0000;
+}
+
+#diferente {
+    color: indigo;
+}
+
+.grande {
+    font-size: larger;
+}
+
+#back-color {
+    text-align: justify;
+    background-color: black;
+    color: white;
+}
+
+#back-img {
+    text-align: justify;
+    background: url(./images/Seamless-Decorative-Tile-Background-Texture-12-copy.jpg) center/cover no-repeat fixed;
+}
+
+#div {
+    text-align: justify;
+    background: url(https://marriedbiography.com/wp-content/uploads/2021/04/Yami-and-Natch.jpg) center/cover no-repeat fixed;
+}
+
+#cm{
+    background: blue;
+    width: 1cm;
+    height: 1cm;
+}
+#mm{
+    background: rgb(255, 0, 0);
+    width: 1mm;
+    height: 1mm;
+}
+#in{
+    background: blue;
+    width: 1in;
+    height: 1in;
+}
+#px{
+    background: rgb(255, 0, 0);
+    width: 10px;
+    height: 10px;
+}
+#pt{
+    background: rgb(0, 0, 255);
+    width: 10pt;
+    height: 10pt;
+}
+#pc{
+    background: rgb(255, 0, 0);
+    width: 1pc;
+    height: 1pc;
+}
