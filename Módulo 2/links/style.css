@@ -1,0 +1,42 @@
+#cursor {
+    text-decoration: none;
+    color: black;
+    cursor: crosshair;
+}
+
+#visit {
+    text-decoration: none;
+    color: black;
+    border-width: 2px;
+    border-style: hidden;
+}
+
+#visit:visited {
+    color: red;
+}
+
+#hover {
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+#hover:hover {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+
+#click {
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+
+#click:active {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}

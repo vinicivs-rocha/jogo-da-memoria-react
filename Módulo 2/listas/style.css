@@ -1,0 +1,35 @@
+#circle {
+    list-style-type: circle;
+}
+
+#square {
+    list-style-type: square;
+}
+
+#up-rom {
+    list-style-type: upper-roman;
+}
+
+#low-rom {
+    list-style-type: lower-roman;
+}
+
+#up-al {
+    list-style-type: upper-alpha;
+}
+
+#low-al {
+    list-style-type: lower-alpha;
+}
+
+#img-index{
+    list-style-image: url(https://vignette3.wikia.nocookie.net/minecraftfanon/images/5/5a/Icon_16x16.png/revision/latest?cb=20131110095351);
+}
+
+#inside{
+    list-style-position: inside;
+}
+
+#inside > li{
+    border: 1px solid black;
+}

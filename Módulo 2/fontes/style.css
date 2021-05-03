@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@font-face {
+    font-family: Asdonuts;
+    src: url(./fonts/Asdonuts.otf);
+}
+
+h2 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+}
+
+h3 {
+    background-color: lightgray;
+    color: black;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+}
+
+p {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+#serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#sans-serif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+    font-family: monospace;
+    text-align: left;
+}
+
+#font-style {
+    font-style: italic;
+}
+
+#big {
+    font-size: 2em;
+}
+
+#small {
+    font-size: 0.5em;
+}
+
+#bold {
+    font-weight: bold;
+}
+
+#bolder {
+    font-weight: bolder;
+}
+
+#lighter {
+    font-weight: lighter;
+}
+
+#small-caps {
+    font-variant: small-caps;
+}
+
+#google-fonts {
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#fonte-baixada {
+    font-family: Asdonuts;
+}
