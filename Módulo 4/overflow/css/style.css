@@ -1,0 +1,26 @@
+body {
+    font-size: 1.2rem;
+}
+
+.container {
+    color: yellow;
+    background-color: blue;
+    width: 300px;
+    height: 100px;
+}
+
+#vis {
+    overflow: visible;
+}
+
+#hid {
+    overflow: hidden;
+}
+
+#scl {
+    overflow: scroll;
+}
+
+#auto {
+    overflow: auto;
+}
