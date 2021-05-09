@@ -1,0 +1,59 @@
+.quadro {
+    width: 500px;
+    height: 500px;
+    border: 1px solid gray;
+}
+
+#pai {
+    position: relative;
+}
+
+.sqr {
+    width: 100px;
+    height: 100px;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+#um {
+    position: relative;
+    left: 400px;
+    top: 400px;
+}
+
+#dois {
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+#tres {
+    position: relative;
+    bottom: 20px;
+}
+
+#quatro {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#cinco{
+    position: fixed;
+    right: 50%;
+    bottom: 50%;
+}
+#seis{
+    position: sticky;
+    top: 0;
+}
