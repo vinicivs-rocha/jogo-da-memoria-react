@@ -4,10 +4,10 @@
 // criancas = 1/2 pessoas
 
 function barbCalc() {
-    let adultQuant = parseInt(document.getElementById('adultQuant').value)
-    let childQuant = parseInt(document.getElementById('childQuant').value)
-    let barbDur = parseFloat(document.getElementById('barbDur').value)
-    let contingent = adultQuant + childQuant * 0.5
+    let adultQuant = document.getElementById('adultQuant').value
+    let childQuant = document.getElementById('childQuant').value
+    let barbDur = document.getElementById('barbDur').value
+    let contingent = parseInt(adultQuant) + parseInt(childQuant) * 0.5
 
     const meatQuantPara = document.getElementById('meatQuant')
     const beerQuantPara = document.getElementById('beerQuant')
@@ -21,9 +21,9 @@ function barbCalc() {
     }
     const beerQuant = () => {
         if (barbDur > 6) {
-            return (2000 * adultQuant) / 1000
+            return (2000 * parseInt(adultQuant)) / 1000
         } else {
-            return (1200 * adultQuant) / 1000
+            return (1200 * parseInt(adultQuant)) / 1000
         }
     }
     const normalQuant = () => {
@@ -34,7 +34,11 @@ function barbCalc() {
         }
     }
 
-    meatQuantPara.innerHTML = `${Math.ceil(meatQuant())}kg de carne`
-    beerQuantPara.innerHTML = `${Math.ceil(beerQuant())} litros de cerveja`
-    normalQuantPara.innerHTML = `${Math.ceil(normalQuant())} litros de bebidas normais`
+    if (adultQuant == '' || childQuant == '' || barbDur == '') {
+        alert('Preencha todos os campos')
+    } else {
+        meatQuantPara.innerHTML = `${Math.ceil(meatQuant())}kg de carne`
+        beerQuantPara.innerHTML = `${Math.ceil(beerQuant())} litros de cerveja`
+        normalQuantPara.innerHTML = `${Math.ceil(normalQuant())} litros de bebidas normais`
+    }
 }
