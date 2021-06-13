@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+* {
+    font-family: 'Staatliches', cursive;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: dimgray;
+}
+
+#gameBoard{
+    max-width: 1000px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .5s ease;
+}
+
+.card:hover{
+    cursor: pointer;
+}
+
+.flip{
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    backface-visibility: hidden;
+}
+
+.front {
+    transform: rotateY(180deg);
+    background-color: #101c2c;
+}
+
+.back {
+    background-color: #07a8da;
+    font-size: 30px;
+    user-select: none;
+}
+
+#gameOver{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0px;
+}
+#restart{
+    padding: 15px;
+    font-size: 20px;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
