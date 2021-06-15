@@ -27,6 +27,7 @@ function createCardContent(card, element) {
 function insertCards() {
     let gameBoard = document.querySelector('#gameBoard')
 
+    gameBoard.innerHTML = ''
     game.cards.forEach((card) => {
         let cardElement = document.createElement('div')
         cardElement.id = card.id
@@ -44,7 +45,32 @@ function startGame() {
 }
 
 function flipCard() {
-    this.classList.add('flip')
+    if (game.cardCheck(this)) {
+        this.classList.add('flip')
+        if (game.pairCheck()) {
+            game.clearCheck()
+            if (game.isGameOver()) {
+                let gameOverLayer = document.querySelector('#gameOver')
+                gameOverLayer.style.display = 'flex'
+            }
+        } else if (game.isGameLocked) {
+            setTimeout(() => {
+                let firstCardCheckView = game.firstCardCheck
+                let secondCardCheckView = game.secondCardCheck
+
+                firstCardCheckView.classList.remove('flip')
+                secondCardCheckView.classList.remove('flip')
+                game.clearCheck()
+            }, 500)
+        }
+    }
+}
+
+function restart() {
+    game.clearCheck()
+    startGame()
+    let gameOverLayer = document.querySelector('#gameOver')
+    gameOverLayer.style.display = 'none'
 }
 
 startGame()

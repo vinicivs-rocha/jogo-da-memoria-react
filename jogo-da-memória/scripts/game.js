@@ -1,4 +1,8 @@
 let game = {
+    isGameLocked: false,
+    firstCardCheck: null,
+    secondCardCheck: null,
+    flippedCards: 0,
     icons: [
         'bootstrap',
         'css',
@@ -53,4 +57,49 @@ let game = {
         }
         return game.cards
     },
+    cardCheck: function (currentCard) {
+        let isFlipped = currentCard.classList.value === 'card flip'
+
+        if (isFlipped || this.isGameLocked) {
+            return false
+        }
+
+        if (!this.firstCardCheck) {
+            game.firstCardCheck = currentCard
+            return true
+        } else {
+            game.secondCardCheck = currentCard
+            game.isGameLocked = true
+            return true
+        }
+    },
+    pairCheck: function () {
+        if (!this.firstCardCheck || !this.secondCardCheck) {
+            return false
+        }
+        return (
+            this.firstCardCheck.dataset.icon ===
+            this.secondCardCheck.dataset.icon
+        )
+    },
+    clearCheck: function () {
+        game.firstCardCheck = null
+        game.secondCardCheck = null
+        game.isGameLocked = false
+    },
+    isGameOver: function () {
+        let children = document.getElementById('gameBoard').children
+        for (let i = 0; i < children.length; i++) {
+            let element = children.item(i);
+            if (element.classList.value === 'card flip') {
+                ++this.flippedCards
+            }
+        }
+        if (this.flippedCards == 20) {
+            return true
+        } else {
+            game.flippedCards = 0
+            return false
+        }
+    }
 }
